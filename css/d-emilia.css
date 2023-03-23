@@ -1,0 +1,292 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box; 
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+header{                            /* ---- CABECERA----*/
+    width: 100%;
+    height: 100%;  
+}
+
+nav{
+    height: 100px;    /*      espacio de la parte superior   */
+    width: 100%; 
+    display: flex;      /*      para que el logo y el menu este a la misma altura  */
+    justify-content: space-between; /*      poner al logo principal y el boton del menu a los extremos  */
+    align-items: center; /*      poner al logo principal y el boton en el centro - alinearlos / centrarlos de arriba y abajo  */
+}
+
+.logo-principal{                   /* ---- Editar el logo superior----*/
+    width: 120px;   /*      Tamaño de la imagen del logo en si    */
+    margin-left: 40px; /*      margen izquierda    */
+    margin-top: 80px;  /*      margen superior    */
+}
+
+.boton-tres-rayas{         /* ---- para edirar el fondo de Boton del menu----*/
+    font-size: 25px;          /*      Tamaño del simbolo    */
+    color: #fff;          /*  Color del simbolo  */
+    margin-right: 20px;    /*   Espacio a la derecha  */
+    cursor: pointer;      /*   para a la hora de poneer el puntero del mause en el boton, se haga dedito  */
+}
+
+.nav-menu{             /* ---- ESTE ES EL MENU DENTRO DEL BOTON DE MENU----*/
+    position: absolute;  /*  para que el boton del menu permanezca a la derecha */
+    width: 100%;          /*  para que el menu ocupe el espacio de derecha a iquierda */
+    text-align: center; /*  para que las letras del menu permanezca en el medio */
+    height: 0vh;          /*  para que el dezaparesca mientras no se haga click en el boton menu */
+    top: 180px;            /*  para que el menu salga a 180px de la parte superior y no tape el logo */
+    background: #363636;  /*  color del fondo del menu al momento que salga  */
+    transition: all .5s;  /*  para que a la hora de hacer click en el boton , el menu salga suave  */
+}
+
+.nav-menu > li{      /* ---- Caja del menu , modifica el tamaño y espacios----*/
+    display: none;   /*  para letras del menu desaparezca al aparecer boton menu*/
+    line-height: 30px; /*  para modificar el tamaño de la caja de las letras del menu*/
+    margin: 40px;  /*  para modificar el espacio que hay entre las letras del menu*/ 
+}
+
+.nav-menu > li > a{  
+    color:black;  /*  color de las letras del menu*/ 
+    font-size: 16px;   /*  Tamaño de las letras del menu*/
+    text-transform: uppercase; /*  poner letras del menu en MAYUSCULA*/
+    font-weight: 600; /*  GRUESOR de letras del menu */
+}
+
+header label:hover{           /* ---- Dar estilo al boton menu al pasar el cursor----*/
+    background: rgb(82, 78, 76); /*      color de fondo cuando se pasa el cursor      */
+    padding: 10px;        /*      tamaño del fondo cuando se pasa el cursor      */
+}
+
+.nav-menu li a.active, .nav-menu li a:hover {     /* ---- Dar estilo a la letras del menu al pasar el cursor----*/
+    color: white;           /*   color    */
+    transition: .3s;             /*    para que se el color salga suave    */
+} 
+
+#btn-menu{
+    display: none;   /* para que el check del boton menu desaparezca*/
+}
+
+#btn-menu:checked ~ .nav-menu{
+    height: 310px;   /* para modificar el tamaño de alto del fondo del menu*/
+}
+
+#btn-menu:checked ~ .nav-menu li{    /* para a la hora de hacer click en el  boton menu , se pueda ver las letras del menu*/
+    display: block;
+}
+.sub-menu {
+    display: none;   /*  para que desaparezca el SUBMENU    */
+}
+@media  (min-width: 768px) {      /* ---- hasta aca es el MENU RESPOSIVE  de 768px para arriba - tamaño PC----*/
+
+    .boton-tres-rayas{
+        display: none;     /*   para que el boton menu desaparezca   */
+    }
+
+    .nav-menu{
+        position: relative; /*   nos PERMITIRA darle movimiento al texto del menu   */
+        height: 100px; /*   nos centra el menu en la caja    */
+        top: 36px;     /*   para que la caja de la letra se pegue en la parte superior   */
+        background: none;    /*   para que NO aparezca con franja de fondo negro gris   */
+        transition: none;    /*   para que NO aparezca la transicion  */
+        text-align:right;    /*   para que el texto del menu se ubique al marguen derecho   */
+        margin-right: 50px;  /*   para que el texto NO se pegue mucho a la derecha   */
+    }
+
+    .nav-menu > li{
+        display: inline-block;   /*   para que aparezca en linea   */
+        margin: 0px 20px;      /*   para la altura del texto */
+        }
+
+    .nav-menu li a{
+        font-size: 12px;   /*   ajustar el TAMAÑO de la letra del MENU y SUB MENU */
+    }
+    
+    .sub-menu li{      /* ---- Caja del SUBmenu , modifica el tamaño y espacios----*/
+    margin: 10px 30px; /*  para modificar el tamaño de la caja de las letras del menu*/
+    text-align: center; /*  para centrar las letras dentro de su caja*/
+    }
+    
+    .sub-menu {
+        position: absolute;  /*   para que apareza debajo de proyectos */
+        display: none;  /*   para que el sub menu aparezca recien cuando pase el cursor */
+        background-color: #353535;    /*   color del fondo del SUB menu */
+        opacity: 0.7;            /*  nivel de transparencia del color del fondeo del sub menu */
+    }
+    
+    .sub-menu li:hover{    /*  efectos al pasar el cursor */
+        border-bottom:  1px solid azure;   /*  para que aparezca una raya bajo la opcion */
+        transition: 0.3s;  /*  con transicion */
+    }
+    
+    .sub-menu li a{  
+    color:azure;  /*  color de las letras del menu*/ 
+    text-transform: uppercase; /*  poner letras del menu en MAYUSCULA*/
+    font-weight: 600; /*  GRUESOR de letras del menu */
+    margin-bottom: 20px;
+    }
+        
+    .banner-txt{
+        font-size: 49px;  /*   ajustar el tamaño de la letra de la FRASE*/
+    }   
+        
+    .nav-menu li:hover .sub-menu {    /*   para que al pasar el cursor, aparezca el submenu en bloque */
+        display:block;
+    }
+    
+    .banner-txt{
+        font-size: 49px;  /*   ajustar el tamaño de la letra de la FRASE*/
+    }
+
+    .logo-principal{                   /* ---- Editar el logo superior----*/
+        width: 180px;   /*      Tamaño de la imagen del logo en si    */
+        margin-left: 40px; /*      margen izquierda    */
+        margin-top: 80px;  /*      margen superior    */
+    }
+}       /* ---- hasta aca es el MENU RESPOSIVE  de 768px para arriba - tamaño PC----*/
+
+/*inicio del banner*/
+.banner {
+        background: url(../imagenes/proyectos/residencial/emilia/banner.jpg);/*es para que el fondo del menu sea un banner*/
+        min-height: 450px;
+        background-position: center center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -999;
+            
+    }
+.banner:before {
+        content: "";
+        width: 100%;
+        min-height: 450px;
+        background: rgba(0,0,0,0.3);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+.banner-content{
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+    font-size: 2em;
+    
+}
+#titulo-contenedor{
+    position: relative;
+    top: 370px;
+    font-family: serif;
+    padding: 40px 100px;
+    margin: 0;
+    text-align: center;
+}
+.texto h2{
+    margin-bottom: 30px;
+    font-size: 3em;
+    text-align: center;
+
+}
+.texto p{
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    text-align: center;
+    color: #767676;
+}
+
+#paquete{
+    margin-top: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.paquete-title{
+   text-align: center;
+   font-family: serif;
+   font-size: 3em;
+   padding: 10px 20%;
+}
+.card{
+   position: relative;
+   width: 500px;
+   height: 400px;
+   margin: 50px;
+}
+.card .front {
+   box-shadow:  0 5px 10px black;
+}
+.card .front img {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;   
+}
+
+.contacto{
+    position: relative;
+    top: 50px;
+    background: #333333;
+    padding: auto;
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+
+}
+.contacto-texto h2{
+    text-align: center;
+    margin: 4px;
+    padding: 20px;
+}
+.contacto-btn{
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+   
+}
+.contacto-btn span{
+    border: 1px solid #fff;
+    padding: 20px 70px;
+    color: #fff;
+}
+
+@media screen and (max-width: 545px){   /*  Responsive del boton CLICK  en 545 px, cuando la pantalla reduce */
+
+    .contacto-btn span{
+        
+        padding: 10px 20px;
+        
+        }   
+}
+
+@media screen and (max-width: 390px){   /*  Responsive solo para la palabra "OFICINA GAMER",cuando la pantalla reduce a 300px */
+
+                .texto h2{
+                font-size: 40px;  /*   para reducir el tamaño de letra */
+                } 
+}
+            @media screen and (max-width: 250px){   /*  Responsive solo para la palabra "OFICINA GAMER",cuando la pantalla reduce a 250px */
+
+                .texto h2{
+                font-size: 35px;  /*   para reducir el tamaño de letra */
+                } 
+            }
+                    @media screen and (max-width: 300px){   /*  Responsive solo para la palabra "OFICINA GAMER",cuando la pantalla reduce a 220px */
+
+                .texto h2{
+                font-size: 25px;  /*   para reducir el tamaño de letra */
+                } 
+            }

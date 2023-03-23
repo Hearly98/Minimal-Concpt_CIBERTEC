@@ -1,0 +1,727 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box; 
+}
+
+body{
+    font-family: "Amiri", sans-serif;
+    background: #fff;
+}
+
+header{                            /* ---- CABECERA----*/
+    width: 100%;
+    height: 100%;  
+}
+
+nav{
+    height: 100px;    /*      espacio de la parte superior   */
+    width: 100%; 
+    display: flex;      /*      para que el logo y el menu este a la misma altura  */
+    justify-content: space-between; /*      poner al logo principal y el boton del menu a los extremos  */
+    align-items: center; /*      poner al logo principal y el boton en el centro - alinearlos / centrarlos de arriba y abajo  */
+}
+
+.logo-principal{                   /* ---- Editar el logo superior----*/
+    width: 120px;   /*      Tamaño de la imagen del logo en si    */
+    margin-left: 40px; /*      margen izquierda    */
+    margin-top: 80px;  /*      margen superior    */
+}
+
+.boton-tres-rayas{         /* ---- para edirar el fondo de Boton del menu----*/
+    font-size: 25px;          /*      Tamaño del simbolo    */
+    color: #fff;          /*  Color del simbolo  */
+    margin-right: 20px;    /*   Espacio a la derecha  */
+    cursor: pointer;      /*   para a la hora de poneer el puntero del mause en el boton, se haga dedito  */
+}
+
+.nav-menu{             /* ---- ESTE ES EL MENU DENTRO DEL BOTON DE MENU----*/
+    position: absolute;  /*  para que el boton del menu permanezca a la derecha */
+    width: 100%;          /*  para que el menu ocupe el espacio de derecha a iquierda */
+    text-align: center; /*  para que las letras del menu permanezca en el medio */
+    height: 0vh;          /*  para que el dezaparesca mientras no se haga click en el boton menu */
+    top: 180px;            /*  para que el menu salga a 180px de la parte superior y no tape el logo */
+    background: #363636;  /*  color del fondo del menu al momento que salga  */
+    transition: all .5s;  /*  para que a la hora de hacer click en el boton , el menu salga suave  */
+}
+
+.nav-menu > li{      /* ---- Caja del menu , modifica el tamaño y espacios----*/
+    display: none;   /*  para letras del menu desaparezca al aparecer boton menu*/
+    line-height: 30px; /*  para modificar el tamaño de la caja de las letras del menu*/
+    margin: 40px;  /*  para modificar el espacio que hay entre las letras del menu*/ 
+}
+
+.nav-menu > li > a{  
+    color:black;  /*  color de las letras del menu*/ 
+    font-size: 16px;   /*  Tamaño de las letras del menu*/
+    text-transform: uppercase; /*  poner letras del menu en MAYUSCULA*/
+    font-weight: 600; /*  GRUESOR de letras del menu */
+}
+
+header label:hover{           /* ---- Dar estilo al boton menu al pasar el cursor----*/
+    background: rgb(82, 78, 76); /*      color de fondo cuando se pasa el cursor      */
+    padding: 10px;        /*      tamaño del fondo cuando se pasa el cursor      */
+}
+
+.nav-menu li a.active, .nav-menu li a:hover {     /* ---- Dar estilo a la letras del menu al pasar el cursor----*/
+    color: white;           /*   color    */
+    transition: .3s;             /*    para que se el color salga suave    */
+} 
+
+#btn-menu{
+    display: none;   /* para que el check del boton menu desaparezca*/
+}
+
+#btn-menu:checked ~ .nav-menu{
+    height: 310px;   /* para modificar el tamaño de alto del fondo del menu*/
+}
+
+#btn-menu:checked ~ .nav-menu li{    /* para a la hora de hacer click en el  boton menu , se pueda ver las letras del menu*/
+    display: block;
+}
+.sub-menu {
+    display: none;   /*  para que desaparezca el SUBMENU    */
+}
+
+
+
+
+
+                                                                         
+                        /*  --------    INICIO del BANNER       -------  */
+.banner {
+        background: url(../imagenes/banner.jpg);/*es para que el fondo del menu sea un banner*/
+        min-height: 450px;
+        background-position: center center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -999;
+            
+    }
+
+.banner:before {
+        content: "";
+        width: 100%;
+        min-height: 450px;
+        background: rgba(0,0,0,0.3);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+.banner-content{
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+    font-size: 2em;
+    
+}
+
+.main{
+    margin-top: 300px;
+   
+}
+
+#team{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    top: 70px;
+}
+
+#izquierda{
+    width: 50%;
+}
+
+#izquierda img{
+    position: relative;
+    left: 45%;
+    width: 45%;
+    padding-top: 50px;
+}
+#derecha{
+    width: 50%;
+    padding: 100px 180px;
+    position: relative;
+    top: 30px;
+    text-align: center;
+}
+.section-title{
+    font-size: 2em;
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+    
+}
+.section-title:before {
+ content: "";
+ width: 200px;
+ position: absolute;
+ top: -10px;
+ left: 50%;
+ transform: translateX(-50%);
+ height: 3px;
+ background: #ce766f;
+ 
+}
+.concpt{
+   position: relative;
+   top: 150px;
+}
+.concpt-txt{
+    padding-top: 10px;
+    font-size: 1.2em;
+    color: #767676;
+    margin-top: 5px;
+}
+.conteiner-design{
+    margin: 20px 0;
+}
+
+.design_item{
+    position: relative;
+}
+.design_item:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+ }
+.design-title{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+    font-size: 1.8em;
+    width: 100%;
+    text-align: center;
+}
+.design-title:before {
+    content: "";
+    width: 200px;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    background: white;
+}
+.design-title:after {
+    content: "";
+    width: 200px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    background: white;
+}
+/*TESTIMONIOOOOOOOOOOO*/
+.containerclientes{
+    position: relative;
+    top: 150px;
+    max-width: 750px;
+    margin: auto;
+    position:relative;
+    background: white;
+    text-align: center;
+    padding: 1em 0;
+    overflow: hidden;
+}
+.containerclientes h2{
+    margin: 0;
+    font-size: 30px;
+    font-weight: 100;
+    color: black;
+}
+.containerclientes hr{
+    width: 50%;
+    position: relative;
+    left: 25%;
+    height: 4px;
+    border: none;
+    background: #ce766f;
+    margin-top: 10px;
+}
+.containerclientes .slides{
+    width: 400%;
+    left: 0%;
+    padding-left: 0;
+    padding-top: 20px;
+    overflow: hidden;
+    list-style: none;
+    position: relative;
+    transition: all .8s cubic-bezier(1, 0, 0, 1);
+}
+.slides li{
+    width: 25%;
+    position: relative;
+    float: left;
+}
+.containerclientes li p{
+    margin-top: 0;
+
+}
+.containerclientes li{
+    max-width: 90%;
+    margin: auto;
+    color: #ce766f;
+    font-size: 20px;
+    font-weight: bold;
+}
+.containerclientes li img{
+    width: 10%;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.containerclientes li span.author{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 100;
+    color: #777777;
+    display: block;
+}
+.navigation{
+    display: block;
+    list-style: none;
+    text-align: center;
+    border: 40px;
+    position: absolute;
+    width: 104px;
+    left: 50%;
+    margin-left: -45px;
+    margin-top: 50px;
+}
+
+.containerclientes input{
+    display: none;
+}
+.navigation label{
+    position: relative;
+    float: left;
+    margin: 6px;
+    top: 80px;
+    margin-top: 10px;
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: solid 2px #ce766f;
+}
+#radio1:checked ~ .slides{
+    transform: translateX(0%);
+}
+#radio2:checked ~ .slides{
+    transform: translateX(-25%);
+}
+#radio3:checked ~ .slides{
+    transform: translateX(-50%);
+}
+.navigation label:hover{
+    cursor: pointer;
+}
+
+#radio1:checked ~ .navigation label#radioSelect1,
+#radio2:checked ~ .navigation label#radioSelect2,
+#radio3:checked ~ .navigation label#radioSelect3 {
+    background: #ce766f;
+}
+
+@media screen and (max-width: 800px) {      /*RISPONSIVE -  del texto*/
+   .containerclientes{
+    margin: 16px 30px;
+   }
+    .navigation{
+        margin-top: 30px;
+    }
+
+    
+} 
+                                                                     
+  /* INCIO DE FOOOOTEEEEEEEEEEEEEEEEEEEER 3columnas */
+
+.footer{
+    margin: 0;
+    padding: 0%;
+    padding-top: 50px;
+    border: 0;
+    width: 100%;
+    margin-top: 120px;
+}
+.container-footer{
+    background-color: #CAB1A5;     /*color del fondo del footer*/
+    display: flex;
+    flex-direction: row;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    
+}
+.logo{
+    width: 200px;
+    height: 180px;
+    margin: 75px;
+}
+                                             /*EDICION DE COLUMNA 1*/
+
+.column1{
+    margin: 35px 25px 2px 25px;
+    display: block;
+    flex-direction: row;
+        
+}
+
+
+
+                                       /*EDICION DE COLUMNA 2*/
+
+.maps{
+    display: block;
+    flex-direction: row;
+    margin: 35px 25px 2px 25px;
+
+}
+.maps h1{
+    margin-bottom: 5px;
+}
+.maps iframe{
+    margin: 5px;
+}
+
+                                        /*EDICION DE COLUMNA 3*/
+.contac{
+   display: flex;
+    margin: 30px;   
+    color: black;
+}
+
+.contac label{
+    margin-left: 10px;
+    margin: 2px 0 2px 10px;
+}
+
+.column3{
+    margin: 35px 25px 2px 70px;
+    color: black;
+
+}
+.redes{
+    margin-top: 25px;
+    padding-bottom: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+}
+
+.redes_contenido{
+   display: flex;
+   color: black;
+   
+}
+
+a.redes_contenido{
+    margin: 10px 10px 10px 10px;
+    color: black;
+    padding: 10px;
+}
+
+
+@media  (min-width: 517px) {      /* ----  MENU RESPOSIVE  de 517px para arriba (solo el LOGO) - tamaño PC----*/
+    
+    .logo-principal{                   /* ---- Editar el logo superior----*/
+    width: 140px;   /*      Tamaño de la imagen del logo en si    */
+    }
+    
+    .banner-txt{
+                font-size: 39px;  /*   ajustar el tamaño de la letra de la FRASE*/
+            }
+}
+    
+        @media  (min-width: 660px) {      /* ----  MENU RESPOSIVE  de 517px para arriba (solo el LOGO) - tamaño PC----*/
+
+            .banner-txt{
+                font-size: 42px;  /*   ajustar el tamaño de la letra de la FRASE*/
+            }
+        }
+
+                    @media  (min-width: 768px) {      /* ---- hasta aca es el MENU RESPOSIVE  de 768px para arriba - tamaño PC----*/
+
+                        .boton-tres-rayas{
+                            display: none;     /*   para que el boton menu desaparezca   */
+                        }
+
+                        .nav-menu{
+                            position: relative; /*   nos PERMITIRA darle movimiento al texto del menu   */
+                            height: 100px; /*   nos centra el menu en la caja    */
+                            top: 36px;     /*   para que la caja de la letra se pegue en la parte superior   */
+                            background: none;    /*   para que NO aparezca con franja de fondo negro gris   */
+                            transition: none;    /*   para que NO aparezca la transicion  */
+                            text-align:right;    /*   para que el texto del menu se ubique al marguen derecho   */
+                            margin-right: 50px;  /*   para que el texto NO se pegue mucho a la derecha   */
+                        }
+
+                        .nav-menu > li{
+                            display: inline-block;   /*   para que aparezca en linea   */
+                            margin: 0px 20px;      /*   para la altura del texto */
+                            }
+
+                        .nav-menu li a{
+                            font-size: 12px;   /*   ajustar el TAMAÑO de la letra del MENU y SUB MENU */
+                        }
+
+                        .sub-menu li{      /* ---- Caja del SUBmenu , modifica el tamaño y espacios----*/
+                        margin: 10px 30px; /*  para modificar el tamaño de la caja de las letras del menu*/
+                        text-align: center; /*  para centrar las letras dentro de su caja*/
+                        }
+
+                        .sub-menu {
+                            position: absolute;  /*   para que apareza debajo de proyectos */
+                            display: none;  /*   para que el sub menu aparezca recien cuando pase el cursor */
+                            background-color: #353535;    /*   color del fondo del SUB menu */
+                            opacity: 0.7;            /*  nivel de transparencia del color del fondeo del sub menu */
+                        }
+
+                        .sub-menu li:hover{    /*  efectos al pasar el cursor */
+                            border-bottom:  1px solid azure;   /*  para que aparezca una raya bajo la opcion */
+                            transition: 0.3s;  /*  con transicion */
+                        }
+
+                        .sub-menu li a{  
+                        color:azure;  /*  color de las letras del menu*/ 
+                        text-transform: uppercase; /*  poner letras del menu en MAYUSCULA*/
+                        font-weight: 600; /*  GRUESOR de letras del menu */
+                        margin-bottom: 20px;
+                        }
+
+                        .banner-txt{
+                            font-size: 49px;  /*   ajustar el tamaño de la letra de la FRASE*/
+                        }   
+
+                        .nav-menu li:hover .sub-menu {    /*   para que al pasar el cursor, aparezca el submenu en bloque */
+                            display:block;
+                        }
+
+                        .banner-txt{
+                            font-size: 49px;  /*   ajustar el tamaño de la letra de la FRASE*/
+                        }
+
+                        .logo-principal{                   /* ---- Editar el logo superior----*/
+                            width: 180px;   /*      Tamaño de la imagen del logo en si    */
+                            margin-left: 40px; /*      margen izquierda    */
+                            margin-top: 80px;  /*      margen superior    */
+                        }
+        }       /* ---- hasta aca es el MENU RESPOSIVE  de 768px para arriba - tamaño PC----*/
+@media screen and (max-width: 1350px) {      /*RISPONSIVE DE CUERPO -  del texto*/
+    #derecha{
+    padding: 90px 150px;
+    }
+}
+    @media screen and (max-width: 1330px) {      /*RISPONSIVE DE CUERPO -  del texto*/
+    #derecha{
+    padding: 40px 140px;
+        }
+    }
+    
+@media screen and (max-width: 1310px) {      /*RISPONSIVE DE CUERPO -  del texto*/
+    #derecha{
+    padding: 60px 130px;
+        }
+    }
+@media screen and (max-width: 1280px) {      /*RISPONSIVE DE CUERPO -  del texto*/
+    #derecha{
+    padding: 0px 100px;
+        }
+   
+    }
+@media screen and (max-width: 1170px) {      /*RISPONSIVE DE CUERPO -  del texto*/
+    #derecha{
+    padding: 0px 80px;
+        }
+   
+    }
+    
+@media screen and (max-width: 1140px) {      /*RISPONSIVE DE CUERPO -  del texto*/
+    #derecha{
+    padding: 0px 70px;
+    top: 10px;
+    }
+    #izquierda img{
+    padding-top: 30px;
+    }
+   
+    }
+@media screen and (max-width: 1100px) {      /*RISPONSIVE DE CUERPO -  del texto*/
+    #derecha{
+        padding: 0px 350px;
+        top: 0px;
+        width: 100%;
+    }
+    
+    #izquierda img{
+    position: relative;
+    width: 60%;   /*  Tamaño de la imagen en si */
+    padding-top: 50px;
+    }
+    
+    #team{
+        position: relative;
+        display: block;   /*  Para poner la columnas abajo */
+        text-align: center;
+    }
+
+    }
+@media screen and (max-width: 1055px) {      /*RISPONSIVE DE CUERPO -  del texto*/
+    #derecha{
+        padding: 0px 340px;
+    }
+    #izquierda img{
+    width: 63%;   /*  Tamaño de la imagen en si */
+    }
+}
+@media screen and (max-width: 1000px) {      /*RISPONSIVE DE CUERPO -  del texto*/
+    #derecha{
+        padding: 0px 300px;
+    }
+    #izquierda img{
+    width: 66%;   /*  Tamaño de la imagen en si */
+    }
+ }
+@media screen and (max-width: 950px) {      /*RISPONSIVE DE CUERPO -  del texto*/
+    #derecha{
+        padding: 0px 280px;
+    }
+    #izquierda img{
+    width: 69%;   /*  Tamaño de la imagen en si */
+    }
+}     
+@media screen and (max-width: 900px) {      /*RISPONSIVE DE CUERPO -  del texto*/
+    #derecha{
+        padding: 0px 230px;
+    }
+    #izquierda img{
+    width: 73%;   /*  Tamaño de la imagen en si */
+    }
+}     
+@media screen and (max-width: 850px) {      /*RISPONSIVE DE CUERPO -  del texto*/
+    #derecha{
+        padding: 0px 200px;
+    }
+    #izquierda img{
+    width: 77%;   /*  Tamaño de la imagen en si */
+    
+    }
+} 
+@media screen and (max-width: 800px) {      /*RISPONSIVE DE CUERPO -  del texto*/
+    #derecha{
+        padding: 0px 150px;
+    }
+    #izquierda img{
+    width: 85%;   /*  Tamaño de la imagen en si */
+    }
+} 
+@media screen and (max-width: 750px) {      /*RISPONSIVE DE CUERPO -  del texto*/
+    #derecha{
+        padding: 0px 100px;
+    }
+    #izquierda img{
+    width: 95%;   /*  Tamaño de la imagen en si */
+    
+    }
+    
+} 
+@media screen and (max-width: 470px) {      /*RISPONSIVE DE CUERPO -  del texto*/
+    #derecha{
+        padding: 0px 50px;
+    }
+    
+} 
+@media screen and (min-width: 875px) {      /*RISPONSIVE DE CUERPO*/
+ 
+    .banner {
+         min-height: 600px;
+     }    
+    .banner:before {
+        min-height: 600px;
+    }
+    .main{
+        margin-top: 450px;
+    }
+
+    .design_item{
+        height: 400px;
+    }
+    .conteiner-design .design-img{
+        
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    
+    }    
+    .conteiner-design {
+        display: flex;
+        flex-wrap: wrap;
+       
+    }
+    .design_item{
+        width: 50%;
+    }
+}
+
+
+                                                               
+       /*RISPONSIVE DE FOOTER*/
+
+@media screen and (max-width: 1180px){   /*  Responsive solo de la columna 3 */
+
+    .container-footer{
+        flex-wrap: wrap;   /*  Para poner la columnas abajo */
+    }
+   
+}
+
+@media screen and (max-width: 875px){   /*  Responsive del FODER */
+    
+ 
+    
+    .container-footer{
+        display: block;   /*  Para poner las columnas una de bajo de otra */
+        text-align: center; /*  Para centrar el logo */
+    }
+
+    .logo{
+        margin-top: 20px; /*  max. de parte superior */
+        margin-bottom: 20px; /*  max. de parte inferior */
+    }
+        
+    .column1{
+        margin: 10px 50px;      /*  max. del borde de la Columna 1 */
+        line-height: 0px;
+    }
+       
+    .maps{
+        margin: 10px 80px; /*  max. del borde del mapa */
+        
+    }
+    
+    .column3{
+        margin: 30px 80px 0px 80px ; /*  max. del borde de la Columna 3 */
+        line-height: 0px;
+    }
+   
+   
+}

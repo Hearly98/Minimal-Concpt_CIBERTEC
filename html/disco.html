@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Palmar</title>
+    <script src="https://kit.fontawesome.com/2eb959e084.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../imagenes/logo.png">
+    <link rel="stylesheet" href="../css/disco.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div id="contenedor"> <!--Primero ponemos un div con un id llamado contenedor, el cual contendrá el menú y el banner-->
+        
+        <header>
+            <nav class="menu">
+                <div>
+                    <img src="../imagenes/1.png" alt="" class="logo-principal">
+                </div>
+                <input type="checkbox" id="btn-menu"><!--para el botón de menúi utilizaremos un input de tipo check box, 
+                    esto nos servirá para que cuando hagamos un click en modo movil, este haga aparecer la barra de menú -->
+                <label for="btn-menu" class="boton-tres-rayas">
+                    <i class="fa-solid fa-bars"></i><!--para los inconos estamos usando fontawesome-->
+                </label>
+                <ul class="nav-menu"> <!--para los menu estamos usando un li, cada uno con su nombre respectivo-->
+                    <li><a href="../html/index.html">Inicio</a></li>
+                    <li><a href="../html/paquetes.html">Paquetes</a></li>
+                    <li><a class="active" href="../html/proyectos.html"> Proyectos</a>
+                        <ul class="sub-menu">
+                            <li><a href="../html/comercial.html">Comercial</a></li>
+                            <li><a href="../html/residencial.html">Residencial</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="..//html/contactanos.html">Contactanos</a></li>
+                    <!--cada li, tiene una etiqueta "a", esto nos servirá para dirigir a la pagina correspondiente-->
+                </ul>
+            </nav>
+        </header>
+
+                                                                             <!--seccion banner-->
+            <div class="banner">
+                    <div class="banner-content">
+                    </div>
+            </div><!--tener cada etiqueta nos permitirá editar especificamente cada uno sin afectar al otro-->
+            
+                                                                          <!--fin de la seccion banner-->
+
+<div id="disco-contenedor">
+    <div class="disco-texto">
+        <h2>EL PALMAR</h2>
+        <p>Este proyecto lleno de música y buena energía se basó en la temática tropical, en donde conceptualizamos “TROPICAL LÚDICO” lugar donde se albergaría a un público más joven y divertido, un espacio lleno de áreas verdes fusionando las luces neón y lleno de color, el estilo rústico y elegante lo conservamos en el local de más de 90m2 en donde la madera, el mimbre y los tapices tropicales son las principales texturas de este lugar.</p>
+    </div>
+</div>
+        
+
+<div id="paquete">
+        <div class="card">
+            <div class="face front">
+                <img src="../imagenes/proyectos/COMERCIAL/disco/d2.jpeg" alt="">
+            </div>
+        </div>   
+        <div class="card">
+            <div class="face front">
+                <img src="../imagenes/proyectos/COMERCIAL/disco/d3.jpeg" alt="">
+            </div>
+        </div>   
+        <div class="card">
+            <div class="face front">
+                <img src="../imagenes/proyectos/COMERCIAL/disco/d4.jpeg" alt="">
+            </div>
+        </div>   
+        <div class="card">
+            <div class="face front">
+               <img src="../imagenes/proyectos/COMERCIAL/disco/d5.jpeg" alt="">
+            </div>
+        </div>   
+        <div class="card">
+            <div class="face front">
+               <img src="../imagenes/proyectos/COMERCIAL/disco/d6.jpeg" alt="">
+            </div>
+        </div>   
+        <div class="card">
+            <div class="face front">
+                <img src="../imagenes/proyectos/COMERCIAL/disco.jpeg" alt="">
+            </div>
+        </div>   
+</div>                  
+<div class="contacto">
+    <div class="contacto-texto">
+        <h2>
+            <span> <strong>¿NECESITAS HABLAR CON NOSOTROS?</strong></span>
+        </h2>
+    </div>
+    <div class="contacto-btn">
+        <a type="button" href="https://api.whatsapp.com/send?phone=51959167416&text=Hola,%20me%20gustar%C3%ADa%20que%20me%20contacten">
+        <span>¡Clic aquí!</span>    
+    </div>
+
+</div>
+</html>

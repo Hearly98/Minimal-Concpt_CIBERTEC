@@ -1,0 +1,195 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Concpt </title>
+    <script src="https://kit.fontawesome.com/2eb959e084.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../imagenes/logo.png">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"><!--usamos este link para poder utilizar los iconos de fontawesome-->
+</head>
+<body>
+
+    <div id="contenedor"> <!--Primero ponemos un div con un id llamado contenedor, el cual contendrá el menú y el banner-->
+        
+        <header>
+            <nav class="menu">
+                <div>
+                    <img src="../imagenes/1.png" alt="" class="logo-principal">
+                </div>
+                <input type="checkbox" id="btn-menu"><!--para el botón de menú utilizaremos un input de tipo check box, 
+                    esto nos servirá para que cuando hagamos un click en modo movil, este haga aparecer la barra de menú -->
+                <label for="btn-menu" class="boton-tres-rayas">
+                    <i class="fa-solid fa-bars"></i><!--para los inconos estamos usando fontawesome-->
+                </label>
+                <ul class="nav-menu"> <!--para los menu estamos usando un li, cada uno con su nombre respectivo-->
+                    <li><a class="active" href="../html/index.html">Inicio</a></li>
+                    <li><a href="../html/paquetes.html">Paquetes</a></li>
+                    <li><a href="../html/proyectos.html"> Proyectos</a>
+                        <ul class="sub-menu">
+                            <li><a href="../html/comercial.html">Comercial</a></li>
+                            <li><a href="../html/residencial.html">Residencial</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="..//html/contactanos.html">Contactanos</a></li>
+                    <!--cada li, tiene una etiqueta "a", esto nos servirá para dirigir a la pagina correspondiente-->
+                </ul>
+            </nav>
+        </header>
+
+                                                                             <!--seccion banner-->
+            <div class="banner">
+                    <div class="banner-content">
+                       
+                        <h2 class="banner-txt">"El cambio es la única cosa inmutable"</h2>
+                    </div>
+            </div><!--tener cada etiqueta nos permitirá editar especificamente cada uno sin afectar al otro-->
+            
+                                                                          <!--fin de la seccion banner-->
+
+            
+        <main class="main">
+            <div id="team">
+                <div id="izquierda">
+                    <div >
+                        <img src="../imagenes/contacto/team.jpg" alt="">
+                    </div>
+                </div>
+                <div id="derecha">
+                    <h1 class="section-title">¿QUÉ ES MINIMAL CONCPT?</h1>
+                    <p class="concpt-txt">
+                       Minimal Concpt es un estudio de diseño creado por 4 interioristas apasionadas por
+                       el arte y el diseño, <br> con el propósito de generar ambientes óptimos para nuestros
+                       clientes, acompañándolos <br> desde el proceso creativo hasta su implementación.
+                   </p><br>
+                </div>
+            </div>
+            
+            <!--definicion breve de la empresa-->
+            <section class="concpt">
+                
+           <!--fin del texto-->     
+           
+           <!--seccion de imagenes-->
+                <section class="conteiner-design">
+                    <div class="design_item">
+                        <a href=""><h3 class="design-title">Cocina</h3></a>
+                        <img src="../imagenes/cocina.jpg" width="100%" alt="" class="design-img">
+                    </div>
+                    <div class="design_item">
+                        <a href=""><h3 class="design-title">Dormitorios</h3></a>
+                        <img src="../imagenes/dormitorios.jpg" width="100%" alt="" class="design-img">
+                    </div>
+                    <div class="design_item">
+                        <a href=""><h3 class="design-title">Salas de estar</h3></a>
+                        <img src="../imagenes/salas de estar.jpg" width="100%" alt="" class="design-img">
+                    </div>
+                    <div class="design_item">
+                        <a href=""><h3 class="design-title">Oficinas</h3></a>
+                        <img src="../imagenes/oficina.jpg" width="100%" alt="" class="design-img">
+                    </div>
+                </section>
+                 <!--fin de la seccion imagenes-->
+            </section><!--fin del section 1-->
+
+
+            <!--inicio de contenido testimonios-->
+
+
+            <div class="containerclientes">
+                <h2>Opiniones de nuestros <b>Seguidores</b></h2>
+                <hr>
+                <input type="radio" name="slides" id="radio1" checked>
+                <input type="radio" name="slides" id="radio2">
+                <input type="radio" name="slides" id="radio3">
+                <ul class="slides">
+                    <li class="slide">
+                        <p>
+                            <q>Muchas gracias por su enorme paciencia, por entender lo que realmente necesitamos y a la vez queríamos.. Muy recomendado!!! Excelente trabajo!!!!!</q>
+                            <span class="author">
+                                <img src="../imagenes/clientes/cliente1.jpg" alt="">
+                                Alejandra Carbonell
+                            </span>
+                        </p>
+                    </li>
+                   
+                    <li class="slide">
+                        <p>
+                            <q>Estamos muy felices del trabajo que vienen realizando con nosotros, ya que despues de culminar el proyecto aún nos siguen asesorando. Mil gracias</q>
+                            <span class="author">
+                                <img src="../imagenes/clientes/cliente2.jpg" alt="">
+                                Girl Force Perú
+                            </span>
+                        </p>
+                    </li>
+                    <li class="slide">
+                        <p>
+                            <q>Tiene Diseñadoras muy capaces y creativas trabajando por brindar un excelente servicio.</q>
+                            <span class="author">
+                                <img src="../imagenes/clientes/cliente3.jpg" alt="">
+                                Josue ZL
+                            </span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation">
+                <label for="radio1" id="radioSelect1"></label>
+                <label for="radio2" id="radioSelect2"></label>
+                <label for="radio3" id="radioSelect3"></label>
+            </div>
+        </div>
+            <!--fin de testimonios-->
+
+        </main> <!--fin del main-->
+    </div><!--fin del div idcontenedor-->
+</body> <!--fin del body-->
+
+<!--inicio del footer-->
+
+<footer class="footer">
+    <section class="container-footer"><!--section del footer-->
+
+       <a href="index.html"> <img class="logo" src="../imagenes/1.png" alt=""></a><!--logo-->
+        
+        <div class="column1">       <!--primera columna del footer (numeros de contacto)-->
+            <h1>Contactanos</h1>
+                <div class="contacto">
+                    <a class="contac" href="" style="text-decoration:none"><i class="fa-solid fa-house"></i>
+                        <label> Av. Urugay 514, Cercado de Lima 15001 </label></a>  
+                    <a class="contac" href="" style="text-decoration:none"><i class="fa-solid fa-mobile-screen-button"></i>
+                        <label> 961223708</label></a>  
+                    <a class="contac"  href="" style="text-decoration:none"><i class="fa-brands fa-whatsapp"></i> 
+                        <label> 961223708</label></a>  
+                    <a class="contac"  href="" style="text-decoration:none"><i class="fa-solid fa-envelope"></i>
+                        <label> minimalconcpt@gmail.com</label></a> 
+                    
+                </div>
+        </div>
+
+
+        <div class="maps">      <!--segunda columna del footer (mapa)-->
+            <h1>Ubicanos</h1>
+            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.8468826868625!2d-77.04318578523896!3d-12.054054191462408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c5bc21605b%3A0x871cd92cd791b4b5!2sAv.%20Uruguay%20514%2C%20Cercado%20de%20Lima%2015001!5e0!3m2!1ses-419!2spe!4v1653823385976!5m2!1ses-419!2spe" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="column3">   <!--tercera columna del footer (redes sociales)-->
+
+                <h1>Siguenos</h1>
+                    <div class="redes">
+                        <a class="redes_contenido" target="_blank" href="https://www.facebook.com/Minimal-Concpt-Interiorismo-106315931507901" style="text-decoration:none"><i class="fa-brands fa-facebook"></i> 
+                            <label>Facebook</label></a>
+                        <a class="redes_contenido" target="_blank" href="https://www.instagram.com/minimalconcpt.interior/" style="text-decoration:none"><i class="fa-brands fa-instagram"></i>
+                            <label>Instagram</label></a>
+                        <a class="redes_contenido" target="_blank" href="https://www.tiktok.com/@minimalconcpt.interior" style="text-decoration:none"><i class="fa-brands fa-tiktok"></i> 
+                            <label>TikTok</a> <br><!--para los iconos de las redes sociales seguimos usando fontawesome-->
+                    </div>
+
+        </div>
+
+    </section>
+</footer> 
+                                        <!--fin del footer-->
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos</title>
+    <script src="https://kit.fontawesome.com/2eb959e084.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../imagenes/logo.png">
+    <link rel="stylesheet" href="../css/proyectos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div id="contenedor"> <!--Primero ponemos un div con un id llamado contenedor, el cual contendrá el menú y el banner-->
+        
+        <header>
+            <nav class="menu">
+                <div>
+                    <img src="../imagenes/1.png" alt="" class="logo-principal">
+                </div>
+                <input type="checkbox" id="btn-menu"><!--para el botón de menúi utilizaremos un input de tipo check box, 
+                    esto nos servirá para que cuando hagamos un click en modo movil, este haga aparecer la barra de menú -->
+                <label for="btn-menu" class="boton-tres-rayas">
+                    <i class="fa-solid fa-bars"></i><!--para los inconos estamos usando fontawesome-->
+                </label>
+                <ul class="nav-menu"> <!--para los menu estamos usando un li, cada uno con su nombre respectivo-->
+                    <li><a href="../html/index.html">Inicio</a></li>
+                    <li><a href="../html/paquetes.html">Paquetes</a></li>
+                    <li><a class="active" href="../html/proyectos.html">Proyectos</a>
+                        <ul class="sub-menu">
+                            <li><a href="../html/comercial.html">Comercial </a></li>
+                            <li><a href="../html/residencial.html">Residencial</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="..//html/contactanos.html">Contactanos</a></li>
+                    <!--cada li, tiene una etiqueta "a", esto nos servirá para dirigir a la pagina correspondiente-->
+                </ul>
+            </nav>
+        </header>
+
+                                                                             <!--seccion banner-->
+            <div class="banner">
+                    <div class="banner-content">
+                    </div>
+            </div><!--tener cada etiqueta nos permitirá editar especificamente cada uno sin afectar al otro-->
+            
+                                                                          <!--fin de la seccion banner-->
+<div id="titulo-contenedor">
+    <div class="texto">
+        <h2>PROYECTOS</h2>
+    </div>
+</div>
+<div id="paquete">
+        <div class="card">
+            <div class="face front">
+                <a href="../html/comercial.html" target="_blank" ><img src="../imagenes/proyectos/comercial.png" alt=""></a>
+                <h3>Comercial</h3>
+            </div>
+        </div>   
+        <div class="card">
+            <div class="face front">
+                <a href="../html/residencial.html"target="_blank" ><img src="../imagenes/proyectos/residencial.jpg" alt=""></a>
+                <h3>Residencial</h3>
+            </div>
+        </div>   
+</div>  
+<div class="derechos">
+    <div class="derechos-texto">
+        <h2>
+            <span>© 2022 Minimal Concept Peru. Todos los derechos reservados</span>
+        </h2>
+    </div>
+    <div class="derechos-texto2">
+        <span>LIMA - PERU</span>    
+    </div>
+</div>
+
+</html>
